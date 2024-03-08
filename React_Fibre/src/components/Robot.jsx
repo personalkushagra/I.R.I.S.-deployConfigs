@@ -1,5 +1,3 @@
-
-
 import React, { useRef,useLayoutEffect } from 'react'
 import { useGLTF,useScroll } from '@react-three/drei'
 import {useFrame} from '@react-three/fiber'

@@ -72,7 +72,7 @@ function App() {
           
           <h2 style={{ position: 'absolute', top: '350vh', left: '50%', transform: `translate(-50%,-50%)` }}>Secition 3 info </h2>              
           
-          <button style={{ position: 'absolute', top: `590vh`,left: '50%', transform: `translate(-50%,-50%)` }}>Buy now</button>
+          <button style={{ position: 'absolute', top: `590vh`,left: '50%', transform: `translate(-50%,-50%)` }}>Learn more</button>
         </Scroll>
       </ScrollControls>
     </>
