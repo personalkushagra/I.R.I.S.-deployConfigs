@@ -12,35 +12,53 @@ header {
   z-index: 1000;
 }
 
-nav ul {
-  list-style-type: none;
+nav {
   display: flex;
-  justify-content: center;
-  padding: 0;
+  align-items: center;
+  height: 60px; /* Adjust as needed */
 }
 
-nav ul li {
+.navbar {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between; /* Adjust for layout spacing */
+}
+
+.navbar li {
   margin: 0 1rem;
 }
 
-nav ul li a {
+.navbar li.logo {
+  flex-grow: 1;
+}
+
+.navbar li.logo img {
+  height: 40px; /* Adjust logo size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.navbar li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.navbar li a:hover {
   color: #007bff;
 }
 
 main {
-  padding-top: 60px;
+  padding-top: 80px; /* Adjust to fit navbar height */
 }
 
 .hero {
-  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-  url('/client/public/bg.jpg');*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  url('');
   background-size: cover;
   background-position: center;
   height: 100vh;

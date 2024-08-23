@@ -7,7 +7,12 @@ function Home() {
     <div className="home">
       <header>
         <nav>
-          <ul>
+          <ul className="navbar">
+            <li className="logo">
+              <Link to="/">
+                <img src="/logo.png" alt="Logo" />
+              </Link>
+            </li>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/events">Events</Link></li>
             <li><Link to="/about">About Us</Link></li>
@@ -22,7 +27,7 @@ function Home() {
           <p>Empowering innovation and fostering technological advancements</p>
         </div>
         <div className="journey">
-          <h3>I.R.I.S JOURNEY WITH US</h3>
+          <h3>JOIN US ON THE I.R.I.S JOURNEY</h3>
           <div className="journey-steps">
             <div className="step">
               <h4>Bring Your Idea</h4>
@@ -58,10 +63,8 @@ function Home() {
           <div className="footer-section">
             <h4>Socials</h4>
             <ul>
-              <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a></li>
-              <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-              <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li><a href="https://www.instagram.com/iris_mitwpu/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://chat.whatsapp.com/Lnu3YpiEM4WDmwCjwDCY6n" target="_blank" rel="noopener noreferrer">WhatsApp Community</a></li>
             </ul>
           </div>
         </div>

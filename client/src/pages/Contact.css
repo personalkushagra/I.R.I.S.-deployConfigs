@@ -1,12 +1,52 @@
+/* Contact.css */
 .contact {
   font-family: 'Roboto', sans-serif;
   color: #333;
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 60px; /* Adjust if necessary */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between; /* Adjust layout spacing */
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar li.logo {
+  flex-grow: 1;
+}
+
+.navbar li.logo img {
+  height: 40px; /* Adjust logo size */
+  width: auto; /* Maintain aspect ratio */
 }
 
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 80px; /* Adjust to fit navbar height */
 }
 
 h1 {
