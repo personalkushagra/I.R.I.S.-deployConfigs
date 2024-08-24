@@ -22,12 +22,17 @@ function Home() {
       </header>
       <main>
         <div className="hero">
-          <h1>I.R.I.S</h1>
-          <h2>Innovation Research & Intelligence Support</h2>
-          <p>Empowering innovation and fostering technological advancements</p>
+          <div className="hero-text">
+            <h1>I.R.I.S</h1>
+            <h2>Innovation Research & Intelligence Support</h2>
+            <p>Empowering innovation and fostering technological advancements</p>
+          </div>
+          <div className="hero-image">
+            <img src="/logo.png" alt="Hero Image" />
+          </div>
         </div>
         <div className="journey">
-          <h3>JOIN US ON THE I.R.I.S JOURNEY</h3>
+          <h3 class="journey-title">JOIN US ON THE I.R.I.S JOURNEY</h3>
           <div className="journey-steps">
             <div className="step">
               <h4>Bring Your Idea</h4>
@@ -44,24 +49,25 @@ function Home() {
           </div>
         </div>
       </main>
+
       <footer>
         <div className="footer-content">
           <div className="footer-section">
             <h4>About</h4>
             <ul>
-              <li><Link to="/about">Featured</Link></li>
+              <li><Link to="/about">Club</Link></li>
+              <li><Link to="/about">Our Team</Link></li>
             </ul>
           </div>
           <div className="footer-section">
             <h4>Events</h4>
             <ul>
-              <li><Link to="/events">Hackathon</Link></li>
-              <li><Link to="/events">Seminars</Link></li>
-              <li><Link to="/events">Workshops</Link></li>
+              <li><Link to="/events">Hackathons</Link></li>
+              <li><Link to="/events">Podcasts</Link></li>
             </ul>
           </div>
           <div className="footer-section">
-            <h4>Socials</h4>
+            <h4>Follow Us</h4>
             <ul>
               <li><a href="https://www.instagram.com/iris_mitwpu/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
               <li><a href="https://chat.whatsapp.com/Lnu3YpiEM4WDmwCjwDCY6n" target="_blank" rel="noopener noreferrer">WhatsApp Community</a></li>
@@ -69,7 +75,7 @@ function Home() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 | I.R.I.S. All rights reserved</p>
+          <p>&copy; 2024 I.R.I.S. All rights reserved</p>
         </div>
       </footer>
     </div>

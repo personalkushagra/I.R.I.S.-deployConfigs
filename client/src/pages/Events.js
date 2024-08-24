@@ -13,15 +13,9 @@ function Events() {
     {
       id: 2,
       title: "Hackathon 2024",
-      description: "Join us for an exciting 48-hour coding challenge!",
+      description: "Join us for an exciting challenge!",
       image: "path/to/event2-image.jpg"
     },
-    {
-      id: 3,
-      title: "AI Workshop",
-      description: "Learn about the latest advancements in Artificial Intelligence.",
-      image: "path/to/event3-image.jpg"
-    }
   ];
 
   return (
@@ -42,36 +36,36 @@ function Events() {
         </nav>
       </header>
       <main>
-        <h1>Upcoming Events</h1>
+        <h1 class="title">Events</h1>
         <div className="event-list">
           {events.map(event => (
             <div key={event.id} className="event-card">
               <img src={event.image} alt={event.title} />
               <h2>{event.title}</h2>
               <p>{event.description}</p>
-              <Link to={`/events/${event.id}`} className="btn">Learn More</Link>
             </div>
           ))}
         </div>
       </main>
+
       <footer>
         <div className="footer-content">
           <div className="footer-section">
             <h4>About</h4>
             <ul>
-              <li><Link to="/about">Featured</Link></li>
+              <li><Link to="/about">Club</Link></li>
+              <li><Link to="/about">Our Team</Link></li>
             </ul>
           </div>
           <div className="footer-section">
             <h4>Events</h4>
             <ul>
-              <li><Link to="/events">Hackathon</Link></li>
-              <li><Link to="/events">Seminars</Link></li>
-              <li><Link to="/events">Workshops</Link></li>
+              <li><Link to="/events">Hackathons</Link></li>
+              <li><Link to="/events">Podcasts</Link></li>
             </ul>
           </div>
           <div className="footer-section">
-            <h4>Socials</h4>
+            <h4>Follow Us</h4>
             <ul>
               <li><a href="https://www.instagram.com/iris_mitwpu/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
               <li><a href="https://chat.whatsapp.com/Lnu3YpiEM4WDmwCjwDCY6n" target="_blank" rel="noopener noreferrer">WhatsApp Community</a></li>
@@ -79,7 +73,7 @@ function Events() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 | I.R.I.S. All rights reserved</p>
+          <p>&copy; 2024 I.R.I.S. All rights reserved</p>
         </div>
       </footer>
     </div>

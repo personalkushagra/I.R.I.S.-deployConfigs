@@ -1,7 +1,31 @@
-/* Contact.css */
 .contact {
   font-family: 'Roboto', sans-serif;
-  color: #333;
+  color:#1a1a1a;
+  background-color:#18206f;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #e6abff8f;
+  color: rgb(67, 40, 188);
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #7d08ae;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(125, 8, 174, 0.5);
 }
 
 header {
@@ -16,7 +40,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  height: 60px; /* Adjust if necessary */
+  height: 60px;
 }
 
 .navbar {
@@ -26,7 +50,7 @@ nav {
   padding: 0;
   margin: 0;
   width: 100%;
-  justify-content: space-between; /* Adjust layout spacing */
+  justify-content: space-between;
 }
 
 .navbar li {
@@ -38,25 +62,32 @@ nav {
 }
 
 .navbar li.logo img {
-  height: 40px; /* Adjust logo size */
-  width: auto; /* Maintain aspect ratio */
+  height: 40px;
+  width: auto;
 }
 
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  padding-top: 80px; /* Adjust to fit navbar height */
+  padding-top: 120px;
+  padding-bottom: 80px;
+  width: 100%;
 }
 
 h1 {
   text-align: center;
   font-size: 2.5rem;
+  margin-top: 120px;
   margin-bottom: 2rem;
 }
 
+.contact-us-title {
+  color:#ffffff;
+}
+
 form {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -64,6 +95,11 @@ form {
 
 .form-group {
   margin-bottom: 1.5rem;
+}
+
+.form-group button[type="submit"] {
+  display: block;
+  margin: 0 auto;
 }
 
 label {
@@ -75,7 +111,7 @@ label {
 input, textarea {
   width: 100%;
   padding: 0.8rem;
-  border: 1px solid #ccc;
+  border: 1px solid #b74848;
   border-radius: 4px;
   font-size: 1rem;
 }
@@ -83,24 +119,6 @@ input, textarea {
 textarea {
   height: 150px;
   resize: vertical;
-}
-
-.btn {
-  display: block;
-  width: 100%;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 1rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #0056b3;
 }
 
 .success-message {
