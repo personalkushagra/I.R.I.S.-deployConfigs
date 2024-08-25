@@ -6,8 +6,8 @@
 
 button[type="submit"] {
   width: 100%;
-  background-color: #e6abff8f;
-  color: rgb(67, 40, 188);
+  background-color: #18206f !important;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 1rem;
   border-radius: 4px;
@@ -18,9 +18,10 @@ button[type="submit"] {
 }
 
 .btn:hover {
-  background-color: #7d08ae;
+  background-color: #bbcffa !important;
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #18206f !important;
 }
 
 .btn:focus {
@@ -87,7 +88,7 @@ h1 {
 }
 
 form {
-  background-color: #ffffff;
+  background-color: #d5c5c8;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -131,4 +132,57 @@ textarea {
 
 .success-message h2 {
   margin-bottom: 1rem;
+}
+
+.notification-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d4edda;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* make sure it's on top of the form */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.notification-content {
+  text-align: center;
+}
+
+.notification-content h2 {
+  margin-bottom: 1rem;
+}
+
+.notification-content p {
+  margin-bottom: 2rem;
+}
+
+.notification-content button {
+  background-color: #18206f;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-content button:hover {
+  background-color: #bbcffa;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #18206f;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

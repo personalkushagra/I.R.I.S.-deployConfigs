@@ -37,8 +37,12 @@ function AboutUs() {
           <h2>Our Vision</h2>
           <p>To be the leading tech community that drives technological advancements and shapes the future of innovation.</p>
         </div>
+        <div className="team-members">
+          <h2>Team Members</h2>
+          <p>person infos with roles to be added</p>
+        </div>
       </main>
-      
+
       <footer>
         <div className="footer-content">
           <div className="footer-section">

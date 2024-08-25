@@ -1,25 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { useRef } from 'react';
 import './Contact.css';
 
 function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+  });
   const [showNotification, setShowNotification] = useState(false);
   const formRef = useRef(null);
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async e => {
+  const axiosInstance = axios.create({
+    baseURL: 'http://localhost:5000/api',
+  });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/contact', formData);
+      const formDataWithTimestamp = {
+        ...formData,
+        created_at: new Date().toISOString(),
+      };
+      const response = await axiosInstance.post('/contact', formDataWithTimestamp);
       if (response.data.success) {
         setShowNotification(true);
-        formRef.current.reset();
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        console.error('Error submitting form:', response.data.error);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -48,7 +69,7 @@ function Contact() {
         </nav>
       </header>
       <main>
-        <h1 class="contact-us-title">Contact Us</h1>
+        <h1 className="contact-us-title">Contact Us</h1>
         <form ref={formRef} onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name*</label>
@@ -105,14 +126,16 @@ function Contact() {
             />
           </div>
           <div className="form-group">
-          <button type="submit" className="btn">Send Message</button>
+            <button type="submit" className="btn">Send Message</button>
           </div>
         </form>
         {showNotification && (
           <div className="notification-popup">
-            <h2>Message sent successfully!</h2>
-            <p>Your message has been sent. Thank you for reaching out!</p>
-            <button onClick={handleOkayButton}>Okay</button>
+            <div className="notification-content">
+              <h2>Message sent successfully!</h2>
+              <p>Your message has been sent. Thank you for reaching out!</p>
+              <button onClick={handleOkayButton}>Okay</button>
+            </div>
           </div>
         )}
       </main>

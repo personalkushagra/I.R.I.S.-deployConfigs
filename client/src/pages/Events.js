@@ -3,20 +3,32 @@ import { Link } from 'react-router-dom';
 import './Events.css';
 
 function Events() {
-  const events = [
-    {
-      id: 1,
-      title: "All New Rush",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
-      image: "path/to/event1-image.jpg"
-    },
-    {
-      id: 2,
-      title: "Hackathon 2024",
-      description: "Join us for an exciting challenge!",
-      image: "path/to/event2-image.jpg"
-    },
-  ];
+  const upcomingEvent = {
+    id: 1,
+    title: "Sept Hackathon",
+    description: "Hacjathon about idk in september",
+    image: "./logo2.png",
+    date: "To be held on: 2024-09-15 || ",
+    time: "10:00 AM",
+  };
+
+  const pastEvent = {
+    id: 2,
+    title: "Innovation Hackathon",
+    description: "This is a past event",
+    image: "./past-innovation-hackathon.jpg",
+    date: "Held on: 2024-02-15",
+    time: "",
+  };
+
+  const podcast = {
+    id: 1,
+    title: "I.R.I.S. Podcast",
+    description: "Our latest podcast episode",
+    image: "./podcast1.jpg",
+    date: "2024-03-14 || ",
+    length: "Length: 21 mins 02 secs",
+  };
 
   return (
     <div className="events">
@@ -36,16 +48,58 @@ function Events() {
         </nav>
       </header>
       <main>
-        <h1 class="title">Events</h1>
-        <div className="event-list">
-          {events.map(event => (
-            <div key={event.id} className="event-card">
-              <img src={event.image} alt={event.title} />
-              <h2>{event.title}</h2>
-              <p>{event.description}</p>
+        <h1 className="title">Events</h1>
+        <section className="upcoming-events">
+          <h2 className="upcoming">Upcoming Events</h2>
+          <div className="event-list">
+            <div key={upcomingEvent.id} className="event-card">
+              <img src={upcomingEvent.image} alt={upcomingEvent.title} />
+              <h2>{upcomingEvent.title}</h2>
+              <p>{upcomingEvent.description}</p>
+              <p>
+                <span>{upcomingEvent.date}</span>
+                <span>{upcomingEvent.time}</span>
+              </p>
+              <Link to={`/events/${upcomingEvent.id}`} className="btn">
+                Click to know more
+              </Link>
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
+        <section className="past-events">
+          <h2 className="past">Past Events</h2>
+          <div className="event-list">
+            <div key={pastEvent.id} className="event-card">
+              <img src={pastEvent.image} alt={pastEvent.title} />
+              <h2>{pastEvent.title}</h2>
+              <p>{pastEvent.description}</p>
+              <p>
+                <span>{pastEvent.date}</span>
+                <span>{pastEvent.time}</span>
+              </p>
+              <Link to={`/events/${pastEvent.id}`} className="btn">
+                Click to know more
+              </Link>
+            </div>
+          </div>
+        </section>
+        <section className="podcasts">
+          <h2 className="podcast-title">Podcasts</h2>
+          <div className="event-list">
+            <div key={podcast.id} className="event-card">
+              <img src={podcast.image} alt={podcast.title} />
+              <h2>{podcast.title}</h2>
+              <p>{podcast.description}</p>
+              <p>
+                <span>{podcast.date}</span>
+                <span>{podcast.length}</span>
+              </p>
+              <a href="https://www.youtube.com/watch?v=sFbYHID_w2c" target="_blank" rel="noopener noreferrer" className="btn">
+                Listen now
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer>

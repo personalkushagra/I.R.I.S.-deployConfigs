@@ -50,13 +50,13 @@ nav {
   width: auto;
 }
 
-.contact-info, .mission, .vision {
-  background-color: #f5f5f5;
+.contact-info, .mission, .vision, .team-members {
+  background-color: #d5c5c8;
   padding: 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
 }
 
-.contact-info h2, .mission, .vision h2 {
+.contact-info h2, .mission h2, .vision h2, .team-members h2 {
   margin-top: 0;
 }
