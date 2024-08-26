@@ -24,6 +24,8 @@ const Event2 = () => {
     member4_prn: '',
   });
 
+  const [showModal, setShowModal] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -34,6 +36,7 @@ const Event2 = () => {
       const response = await axios.post('http://localhost:5000/api/event2', formData);
       if (response.data.success) {
         console.log('Registration successful!');
+        setShowModal(true);
         setFormData({
           team_name: '',
           leader_name: '',
@@ -61,6 +64,20 @@ const Event2 = () => {
     }
   };
 
+  const Modal = () => {
+    return (
+      <div className="modal-overlay">
+        <div className="modal-content">
+          <h2>Team details saved!</h2>
+          <p>*Complete the payment for successful registration*</p>
+          <button onClick={() => window.open('https://example.com/payment', '_blank')} className="proceed-button">Proceed to Pay</button>
+          
+          <button onClick={() => setShowModal(false)} className="close-button">Close (Cancel Registration)</button>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="event2">
       <header>
@@ -79,11 +96,11 @@ const Event2 = () => {
         </nav>
       </header>
       <main>
-        <h1>Upcoming Event: September Hackathon</h1>
+        <h1 className="title">Upcoming Event: September Hackathon</h1>
         <p>This is a short description of the event.</p>
         <img src="event2-image.jpg" alt="Event 2 Image" />
         <div className="checkout-box">
-          <h2>Registration Fee: INR 250</h2>
+          <h2 className="title2">Registration Fee: INR 250</h2>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -207,8 +224,9 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="PRN"
             />
-            <button>Save Details and Proceed to Pay</button>
+            <button type="submit">Save Details</button>
           </form>
+          {showModal && <Modal />}
         </div>
       </main>
       <footer>
