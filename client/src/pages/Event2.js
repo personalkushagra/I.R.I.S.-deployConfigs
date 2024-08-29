@@ -10,18 +10,22 @@ const Event2 = () => {
     leader_phone: '',
     leader_email: '',
     leader_prn: '',
+    leader_branch: '',
     member2_name: '',
     member2_phone: '',
     member2_email: '',
     member2_prn: '',
+    member2_branch: '',
     member3_name: '',
     member3_phone: '',
     member3_email: '',
     member3_prn: '',
+    member3_branch: '',
     member4_name: '',
     member4_phone: '',
     member4_email: '',
     member4_prn: '',
+    member4_branch: '',
   });
 
   const [showModal, setShowModal] = useState(false);
@@ -33,7 +37,54 @@ const Event2 = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/event2', formData);
+      const {
+        team_name,
+        leader_name,
+        leader_phone,
+        leader_email,
+        leader_prn,
+        leader_branch,
+        member2_name,
+        member2_phone,
+        member2_email,
+        member2_prn,
+        member2_branch,
+        member3_name,
+        member3_phone,
+        member3_email,
+        member3_prn,
+        member3_branch,
+        member4_name,
+        member4_phone,
+        member4_email,
+        member4_prn,
+        member4_branch,
+      } = formData;
+  
+      const response = await axios.post('http://localhost:5000/api/event2', {
+        team_name,
+        leader_name,
+        leader_phone,
+        leader_email,
+        leader_prn,
+        leader_branch,
+        member2_name,
+        member2_phone,
+        member2_email,
+        member2_prn,
+        member2_branch,
+        member3_name,
+        member3_phone,
+        member3_email,
+        member3_prn,
+        member3_branch,
+        member4_name,
+        member4_phone,
+        member4_email,
+        member4_prn,
+        member4_branch,
+      });
+  
       if (response.data.success) {
         console.log('Registration successful!');
         setShowModal(true);
@@ -43,18 +94,22 @@ const Event2 = () => {
           leader_phone: '',
           leader_email: '',
           leader_prn: '',
+          leader_branch: '',
           member2_name: '',
           member2_phone: '',
           member2_email: '',
           member2_prn: '',
+          member2_branch: '',
           member3_name: '',
           member3_phone: '',
           member3_email: '',
           member3_prn: '',
+          member3_branch: '',
           member4_name: '',
           member4_phone: '',
           member4_email: '',
           member4_prn: '',
+          member4_branch: '',
         });
       } else {
         console.error('Error registering:', response.data.error);
@@ -71,7 +126,7 @@ const Event2 = () => {
           <h2>Team details saved!</h2>
           <p>*Complete the payment for successful registration*</p>
           <button onClick={() => window.open('https://example.com/payment', '_blank')} className="proceed-button">Proceed to Pay</button>
-          
+
           <button onClick={() => setShowModal(false)} className="close-button">Close (Cancel Registration)</button>
         </div>
       </div>
@@ -102,6 +157,7 @@ const Event2 = () => {
         <div className="checkout-box">
           <h2 className="title2">Registration Fee: INR 250</h2>
           <form onSubmit={handleSubmit}>
+            <h3>Team Information:</h3>
             <input
               type="text"
               name="team_name"
@@ -109,6 +165,7 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="Team Name"
             />
+            <h3>Leader:</h3>
             <input
               type="text"
               name="leader_name"
@@ -136,6 +193,13 @@ const Event2 = () => {
               value={formData.leader_prn}
               onChange={handleChange}
               placeholder="Leader PRN"
+            />
+            <input
+              type="text"
+              name="leader_branch"
+              value={formData.leader_branch}
+              onChange={handleChange}
+              placeholder="Branch | Ex: SYCSE Core"
             />
             <h3>Member 2:</h3>
             <input
@@ -166,6 +230,13 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="PRN"
             />
+            <input
+              type="text"
+              name="member2_branch"
+              value={formData.member2_branch}
+              onChange={handleChange}
+              placeholder="Branch | Ex: SYCSE Core"
+            />
             <h3>Member 3:</h3>
             <input
               type="text"
@@ -195,6 +266,13 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="PRN"
             />
+            <input
+              type="text"
+              name="member3_branch"
+              value={formData.member3_branch}
+              onChange={handleChange}
+              placeholder="Branch | Ex: SYCSE Core"
+            />
             <h3>Member 4:</h3>
             <input
               type="text"
@@ -223,6 +301,13 @@ const Event2 = () => {
               value={formData.member4_prn}
               onChange={handleChange}
               placeholder="PRN"
+            />
+            <input
+              type="text"
+              name="member4_branch"
+              value={formData.member4_branch}
+              onChange={handleChange}
+              placeholder="Branch | Ex: SYCSE Core"
             />
             <button type="submit">Save Details</button>
           </form>

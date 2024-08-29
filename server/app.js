@@ -47,19 +47,24 @@ app.post('/api/event2', (req, res) => {
       leader_phone,
       leader_email,
       leader_prn,
+      leader_branch,
       member2_name,
       member2_phone,
       member2_email,
       member2_prn,
+      member2_branch,
       member3_name,
       member3_phone,
       member3_email,
       member3_prn,
+      member3_branch,
       member4_name,
       member4_phone,
       member4_email,
       member4_prn,
+      member4_branch,
     } = req.body;
+
     const query = `
       INSERT INTO event2_registrations (
         team_name,
@@ -67,19 +72,23 @@ app.post('/api/event2', (req, res) => {
         leader_phone,
         leader_email,
         leader_prn,
+        leader_branch,
         member2_name,
         member2_phone,
         member2_email,
         member2_prn,
+        member2_branch,
         member3_name,
         member3_phone,
         member3_email,
         member3_prn,
+        member3_branch,
         member4_name,
         member4_phone,
         member4_email,
-        member4_prn
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        member4_prn,
+        member4_branch
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
     console.log('Query:', query);
     db.query(
@@ -90,18 +99,22 @@ app.post('/api/event2', (req, res) => {
         leader_phone,
         leader_email,
         leader_prn,
+        leader_branch,
         member2_name,
         member2_phone,
         member2_email,
         member2_prn,
+        member2_branch,
         member3_name,
         member3_phone,
         member3_email,
         member3_prn,
+        member3_branch,
         member4_name,
         member4_phone,
         member4_email,
         member4_prn,
+        member4_branch,
       ],
       (err, result) => {
         if (err) {
