@@ -3,22 +3,22 @@ import { Link } from 'react-router-dom';
 import './Events.css';
 
 function Events() {
-  const upcomingEvent = {
-    id: 1,
-    title: "Sept Hackathon",
-    description: "Hacjathon about idk in september",
-    image: "./logo2.png",
-    date: "To be held on: 2024-09-15 || ",
-    time: "10:00 AM",
-  };
-
   const pastEvent = {
-    id: 2,
+    id: 1,
     title: "Innovation Hackathon",
     description: "This is a past event",
     image: "./past-innovation-hackathon.jpg",
     date: "Held on: 2024-02-15",
     time: "",
+  };
+
+  const upcomingEvent = {
+    id: 2,
+    title: "Sept Hackathon",
+    description: "Hackathon about idk in september",
+    image: "./logo2.png",
+    date: "To be held on: 2024-09-15 || ",
+    time: "10:00 AM",
   };
 
   const podcast = {

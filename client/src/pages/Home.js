@@ -32,7 +32,7 @@ function Home() {
           </div>
         </div>
         <div className="journey">
-          <h3 class="journey-title">JOIN US ON THE I.R.I.S JOURNEY</h3>
+          <h3 className="journey-title">JOIN US ON THE I.R.I.S JOURNEY</h3>
           <div className="journey-steps">
             <div className="step">
               <h4>Bring Your Idea</h4>
