@@ -1,37 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './event1.css';
 
-const Event1 = () => {
+function Terms() {
   return (
-    <div className="event1">
-      <header>
-        <nav>
-          <ul className="navbar">
-            <li className="logo">
-              <Link to="/">
-                <img src="/logo.png" alt="Logo" />
-              </Link>
-            </li>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/events">Events</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <div className="event1-container">
-          <h1>Innovation Hackathon</h1>
-          <p>This is a short description of the event.</p>
-          <div className="image-gallery">
-            <img src="image1.jpg" alt="Image 1" />
-            <img src="image2.jpg" alt="Image 2" />
-            <img src="image3.jpg" alt="Image 3" />
-          </div>
-        </div>
-      </main>
-      
+    <div className="terms">
+      <h1>Terms and Conditions</h1>
+      <p>
+        By using our website, you agree to these terms and conditions.
+        Please read them carefully before using our website.
+      </p>
+      <h2>Use of our website</h2>
+      <p>
+        You must use our website for lawful purposes only.
+        You must not use our website to harm or offend others.
+      </p>
+      <h2>Intellectual property</h2>
+      <p>
+        All content on our website is owned by us or our licensors.
+        You must not copy, modify, or distribute our content without our permission.
+      </p>
+      <h2>Liability</h2>
+      <p>
+        We are not liable for any damages or losses arising from your use of our website.
+        We are not responsible for any third-party content or services.
+      </p>
       <footer>
         <div className="footer-content">
           <div className="footer-section">
@@ -70,6 +62,6 @@ const Event1 = () => {
       </footer>
     </div>
   );
-};
+}
 
-export default Event1;
+export default Terms;

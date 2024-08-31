@@ -314,6 +314,7 @@ const Event2 = () => {
           {showModal && <Modal />}
         </div>
       </main>
+      
       <footer>
         <div className="footer-content">
           <div className="footer-section">
@@ -335,6 +336,14 @@ const Event2 = () => {
             <ul>
               <li><a href="https://www.instagram.com/iris_mitwpu/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
               <li><a href="https://chat.whatsapp.com/Lnu3YpiEM4WDmwCjwDCY6n" target="_blank" rel="noopener noreferrer">WhatsApp Community</a></li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h4>Policies</h4>
+            <ul>
+              <li><Link to="/policy">Privacy Policy</Link></li>
+              <li><Link to="/terms">Terms and Conditions</Link></li>
+              <li><Link to="/refund">Refund Policy</Link></li>
             </ul>
           </div>
         </div>

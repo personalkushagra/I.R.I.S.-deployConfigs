@@ -5,6 +5,9 @@ import Event1 from './pages/Event1';
 import Event2 from './pages/Event2';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Policy from './pages/policy';
+import Refund from './pages/refund';
+import Terms from './pages/terms';
 
 function AppRouter() {
   return (
@@ -16,6 +19,9 @@ function AppRouter() {
         <Route path="/events/2" element={<Event2 />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/policy" element={<Policy />} />
+        <Route path="/refund" element={<Refund />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
     </Router>
   );

@@ -73,6 +73,14 @@ function Home() {
               <li><a href="https://chat.whatsapp.com/Lnu3YpiEM4WDmwCjwDCY6n" target="_blank" rel="noopener noreferrer">WhatsApp Community</a></li>
             </ul>
           </div>
+          <div className="footer-section">
+            <h4>Policies</h4>
+            <ul>
+              <li><Link to="/policy">Privacy Policy</Link></li>
+              <li><Link to="/terms">Terms and Conditions</Link></li>
+              <li><Link to="/refund">Refund Policy</Link></li>
+            </ul>
+          </div>
         </div>
         <div className="footer-bottom">
           <p>&copy; 2024 I.R.I.S. All rights reserved</p>
