@@ -1,37 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './event1.css';
+import {Link} from 'react-router-dom';
 
-const Event1 = () => {
+function Policy() {
   return (
-    <div className="event1">
-      <header>
-        <nav>
-          <ul className="navbar">
-            <li className="logo">
-              <Link to="/">
-                <img src="/logo.png" alt="Logo" />
-              </Link>
-            </li>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/events">Events</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <div className="event1-container">
-          <h1>Innovation Hackathon</h1>
-          <p>This is a short description of the event.</p>
-          <div className="image-gallery">
-            <img src="image1.jpg" alt="Image 1" />
-            <img src="image2.jpg" alt="Image 2" />
-            <img src="image3.jpg" alt="Image 3" />
-          </div>
-        </div>
-      </main>
-      
+    <div className="policy">
+      <h1>Privacy Policy</h1>
+      <p>
+        At I.R.I.S, we are committed to protecting the privacy of our users.
+        This policy explains how we collect, use, and protect your personal data.
+      </p>
+      <h2>What information do we collect?</h2>
+      <p>
+        We collect information that you provide to us, such as your name, email address, and phone number.
+        We also collect information about your interactions with our website, such as your IP address and browsing history.
+      </p>
+      <h2>How do we use your information?</h2>
+      <p>
+        We use your information to provide you with our services, to communicate with you, and to improve our website.
+        We do not share your information with third parties without your consent.
+      </p>
+      <h2>How do we protect your information?</h2>
+      <p>
+        We take reasonable measures to protect your information from unauthorized access, use, and disclosure.
+        We use encryption and other security technologies to protect your data.
+      </p>
       <footer>
         <div className="footer-content">
           <div className="footer-section">
@@ -70,6 +62,6 @@ const Event1 = () => {
       </footer>
     </div>
   );
-};
+}
 
-export default Event1;
+export default Policy;

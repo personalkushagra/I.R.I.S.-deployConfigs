@@ -1,37 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './event1.css';
 
-const Event1 = () => {
+function Refund() {
   return (
-    <div className="event1">
-      <header>
-        <nav>
-          <ul className="navbar">
-            <li className="logo">
-              <Link to="/">
-                <img src="/logo.png" alt="Logo" />
-              </Link>
-            </li>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/events">Events</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <div className="event1-container">
-          <h1>Innovation Hackathon</h1>
-          <p>This is a short description of the event.</p>
-          <div className="image-gallery">
-            <img src="image1.jpg" alt="Image 1" />
-            <img src="image2.jpg" alt="Image 2" />
-            <img src="image3.jpg" alt="Image 3" />
-          </div>
-        </div>
-      </main>
-      
+    <div className="refund">
+      <h1>Refund Policy</h1>
+      <p>
+        At I.R.I.S, we want to ensure that you are satisfied with our services.
+        If you are not satisfied, we offer a refund policy.
+      </p>
+      <h2>Eligibility for Refund</h2>
+      <p>
+        You are eligible for a refund if you have paid for our services and are not satisfied with them.
+        You must request a refund within 30 days of payment.
+      </p>
+      <h2>Refund Process</h2>
+      <p>
+        To request a refund, please contact us at [insert contact email].
+        We will process your refund within 14 days of receiving your request.
+      </p>
+      <h2>Refund Amount</h2>
+      <p>
+        The refund amount will be the full amount paid for the service, minus any applicable fees.
+      </p>
+      <h2>Exceptions</h2>
+      <p>
+        We reserve the right to deny a refund if:
+        <ul>
+          <li>You have used the service for more than 30 days.</li>
+          <li>You have not followed our terms and conditions.</li>
+          <li>You have not provided sufficient information to process the refund.</li>
+        </ul>
+      </p>
+      <h2>Payment Methods</h2>
+      <p>
+        Refunds will be processed using the original payment method.
+      </p>
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions or concerns about our refund policy, please contact us at [insert contact email].
+      </p>
       <footer>
         <div className="footer-content">
           <div className="footer-section">
@@ -70,6 +78,6 @@ const Event1 = () => {
       </footer>
     </div>
   );
-};
+}
 
-export default Event1;
+export default Refund;
