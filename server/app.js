@@ -1,22 +1,23 @@
-const express = require('express');
+import express from 'express';
+import 'dotenv/config';
+import db from './server.js';
+import paymentRoutes from "./paymentRoutes.js";
+
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
+// Middleware for CORS
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 
-// Import the database connection
-const db = require('./database');
-
 // Define routes
 app.get('/api/home', (req, res) => {
-  // Handle home page API request
   res.json({ message: 'Welcome to the home page!' });
 });
 
@@ -130,6 +131,13 @@ app.post('/api/event2', (req, res) => {
     res.status(500).json({ success: false, error: 'Server error' });
   }
 });
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
+// Use payment routes
+app.use('/api', paymentRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
