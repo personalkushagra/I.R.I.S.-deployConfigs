@@ -25,8 +25,8 @@ function AboutUs() {
         <p class="title-desc">I.R.I.S (Innovation Research & Intelligence Support) is a tech club dedicated to fostering innovation and supporting research in the field of technology.</p>
         <div className="contact-info">
           <h2>Contact Information</h2>
-          <p>Email: idkforiris@mitwpu.edu.in</p>
-          <p>Phone: +91 1234567890</p>
+          <p>Email: iris@mitwpu.edu.in</p>
+          <p>Phone: +91 7715958053</p>
           <p>Address: MIT World Peace University Survey No, 124, Paud Rd, Kothrud, Pune, Maharashtra 411038</p>
         </div>
         <div className="mission">

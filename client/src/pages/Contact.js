@@ -69,7 +69,7 @@ function Contact() {
         </nav>
       </header>
       <main>
-        <h1 className="contact-us-title">Contact Us</h1>
+        <h1 className="contact-us-title">Contact Us (working on backend after Razorpay integration)</h1>
         <form ref={formRef} onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name*</label>
