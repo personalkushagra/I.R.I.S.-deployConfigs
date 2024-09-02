@@ -229,3 +229,83 @@ footer {
   padding-top: 1rem;
   border-top: 1px solid #333;
 }
+
+/* Add this media query to target only mobile screens */
+@media only screen and (max-width: 768px) {
+  /* Navbar changes */
+  .navbar {
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: fixed; /* Fix the header */
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1; /* Ensure the navbar is on top of other elements */
+    display: flex; /* Add this to ensure navbar is displayed as flex */
+    justify-content: center; /* Add this to center the navbar items */
+  }
+  
+  .navbar li {
+    margin: 0 0.5rem; /* Reduce margin to fit all items on one line */
+  }
+  
+  .navbar li.logo {
+    flex-grow: 0; /* Reset flex-grow to prevent logo from taking up too much space */
+    margin: 0 auto; /* Add this to center the logo */
+  }
+  
+  .navbar li.logo img {
+    height: 30px; /* Reduce logo size for mobile view */
+  }
+  
+  .navbar li:last-child { /* Target the last list item (Contact) */
+    margin-left: auto; /* Add this to push the Contact item to the right */
+  }
+  
+  /* Hero image changes */
+  .hero-image img {
+    max-width: 100%;
+    width: 80%; /* Increase image size for mobile view */
+    height: auto;
+    margin: 2rem auto; /* Add some spacing around the image */
+  }
+  
+  /* Hero text changes */
+  .hero-text h1 {
+    font-size: 2.5rem; /* Reduce font size for mobile view */
+  }
+  
+  .hero-text h2 {
+    font-size: 1.5rem; /* Reduce font size for mobile view */
+  }
+  
+  .hero-text p {
+    font-size: 1rem; /* Reduce font size for mobile view */
+  }
+  
+  /* Journey section changes */
+  .journey-steps {
+    flex-direction: column;
+  }
+  
+  .step {
+    width: 100%;
+    margin-bottom: 2rem; /* Add some spacing between journey cards */
+  }
+  
+  .step:hover {
+    background-color: #c94065; /* Add a hover effect for mobile view */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer changes */
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-section {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}

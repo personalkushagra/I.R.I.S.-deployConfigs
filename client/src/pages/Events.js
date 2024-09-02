@@ -15,10 +15,10 @@ function Events() {
   const upcomingEvent = {
     id: 2,
     title: "Sept Hackathon",
-    description: "Hackathon details to be added soon!",
+    description: "Hackathon details to be added soon\n Registration starts from 13th Sept, 2024. Stay Tuned!",
     image: "./logo2.png",
-    date: "To be held on: 2024-09-25 || ",
-    time: "10:00 AM",
+    date: "To be held on: 2024-09-27 || ",
+    time: "04:00 PM",
   };
 
   const podcast = {

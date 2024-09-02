@@ -8,10 +8,12 @@ import Contact from './pages/Contact';
 import Policy from './pages/policy';
 import Refund from './pages/refund';
 import Terms from './pages/terms';
+import ScrollToTop from './ScrollToTop';
 
 function AppRouter() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Event />} />
