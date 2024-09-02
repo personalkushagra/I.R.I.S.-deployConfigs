@@ -15,9 +15,9 @@ function Events() {
   const upcomingEvent = {
     id: 2,
     title: "Sept Hackathon",
-    description: "Hackathon about idk in september",
+    description: "Hackathon details to be added soon!",
     image: "./logo2.png",
-    date: "To be held on: 2024-09-15 || ",
+    date: "To be held on: 2024-09-25 || ",
     time: "10:00 AM",
   };
 
