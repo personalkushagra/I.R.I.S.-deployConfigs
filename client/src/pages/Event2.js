@@ -60,7 +60,7 @@ const Event2 = () => {
         member4_prn,
         member4_branch,
       } = formData;
-  
+
       const response = await axios.post('http://localhost:5000/api/event2', {
         team_name,
         leader_name,
@@ -84,7 +84,7 @@ const Event2 = () => {
         member4_prn,
         member4_branch,
       });
-  
+
       if (response.data.success) {
         console.log('Registration successful!');
         setShowModal(true);
@@ -314,7 +314,7 @@ const Event2 = () => {
           {showModal && <Modal />}
         </div>
       </main>
-      
+
       <footer>
         <div className="footer-content">
           <div className="footer-section">
