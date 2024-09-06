@@ -13,36 +13,29 @@ function Home() {
       </video>
       
       <div className="overlay">
-        <header>
-          <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-gradient">
-            <div className="container-fluid">
-              <Link to="/" className="navbar-brand">
-                <img src="/logo.png" alt="Logo" height="40" />
-              </Link>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul className="navbar-nav">
-                  <li className="nav-item">
-                    <Link to="/" className="nav-link">Home</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="/events" className="nav-link">Events</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="/about" className="nav-link">About Us</Link></li>
-                  <li className="nav-item">
-                    <Link to="/contact" className="nav-link">Contact</Link>
-                  </li>
-                </ul>
-              </div>
+      <header className="bg-dark fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark">
+          <div class="container py-0 align-content-center">
+            <Link className="navbar-brand" to="/">
+              <img src="/logo.png" alt="Logo" className="logo-img" />
+            </Link>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0 p-3 justify-content-end">
+                <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/events">Events</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/about">About Us</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
+              </ul>
             </div>
-          </nav>
-        </header>
+          </div>
+        </nav>
+      </header>
 
         <main className="flex-grow-1">
-          <div className="hero text-white d-flex align-items-center">
+          <div className="hero text-white d-flex align-items-center ">
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-lg-6 text-center text-lg-start">
@@ -63,7 +56,7 @@ function Home() {
 
           <div className="journey py-5 text-center text-light">
             <div className="container">
-              <h3 className="journey-title">Join us on the I.R.I.S Journey</h3>
+              <h3 className="journey-title py-5">Join us on the I.R.I.S Journey</h3>
               <div className="row g-4">
                 <div className="col-md-4">
                   <div className="step p-4 shadow-sm h-100">
