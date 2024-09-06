@@ -15,12 +15,12 @@ function Home() {
       <div className="overlay">
       <header className="bg-dark fixed-top">
         <nav className="navbar navbar-expand-lg navbar-dark">
-          <div class="container py-0 align-content-center">
+          <div className="container py-0 align-content-center">
             <Link className="navbar-brand" to="/">
               <img src="/logo.png" alt="Logo" className="logo-img" />
             </Link>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon "></span>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon "></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0 p-3 justify-content-end">
