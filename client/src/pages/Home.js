@@ -13,9 +13,9 @@ function Home() {
       </video>
       
       <div className="overlay">
-      <header className="bg-dark fixed-top">
-        <nav className="navbar navbar-expand-lg navbar-dark">
-          <div class="container py-0 align-content-center">
+      <header className="fixed-top">
+        <nav className="navbar navbar-expand-lg px-0">
+          <div class="container py-0 px-0 align-content-center">
             <Link className="navbar-brand" to="/">
               <img src="/logo.png" alt="Logo" className="logo-img" />
             </Link>
@@ -23,7 +23,7 @@ function Home() {
                     <span class="navbar-toggler-icon "></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav ms-auto mb-2 mb-lg-0 p-3 justify-content-end">
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0 py-3 justify-content-end">
                 <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/events">Events</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/about">About Us</Link></li>
