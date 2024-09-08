@@ -8,16 +8,16 @@ function Events() {
     title: "Innovation Hackathon",
     description: "This is a past event",
     image: "./past-innovation-hackathon.jpg",
-    date: "Held on: 2024-02-15",
+    date: "Held on: 15/02/2024",
     time: "",
   };
 
   const upcomingEvent = {
     id: 2,
     title: "Sept Hackathon",
-    description: "Hackathon details to be added soon\n Registration starts from 13th Sept, 2024. Stay Tuned!",
+    description: "Hackathon details to be added soon. Registration starts from 13th Sept, 2024. Stay Tuned!",
     image: "./logo2.png",
-    date: "To be held on: 2024-09-27 || ",
+    date: "To be held on: 26/09/2024 || ",
     time: "04:00 PM",
   };
 
@@ -61,7 +61,7 @@ function Events() {
                 <span>{upcomingEvent.time}</span>
               </p>
               <Link to={`/events/${upcomingEvent.id}`} className="btn">
-                Click to know more
+                REGISTRATION OPEN!
               </Link>
             </div>
           </div>

@@ -1,0 +1,24 @@
+.navbar {
+    padding: 0.8rem 0rem;
+  }
+  .navbar .container{
+    max-width: 100%;
+  }
+  .navbar-collapse .navbar-nav{
+    /* background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important; */
+    position:relative;
+  }
+  
+  .navbar-brand .logo-img {
+    height: 50px;
+  }
+  .nav-item{
+    position: relative;
+    padding-left: 0.5em;
+    font: normal normal normal 20px/24px Roboto;
+    padding-right: 0.5em;
+  }
+  
+  .nav-link{
+    color: #fffffff2 !important;
+  }

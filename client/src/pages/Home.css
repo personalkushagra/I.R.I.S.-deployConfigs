@@ -44,12 +44,12 @@ html, body {
 .navbar {
   padding: 0.8rem 0rem;
 }
+.navbar .container{
+  max-width: 100%;
+}
 .navbar-collapse .navbar-nav{
   /* background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important; */
   position:relative;
-}
-.navbar-toggler-icon {
-  filter: invert(1); /* Inverts the default color */
 }
 
 .navbar-brand .logo-img {
@@ -71,6 +71,7 @@ html, body {
   padding: 80px 10px;
   margin: 50px 0;
   text-align: center;
+  color: #ffffff !important;
 }
 
 .hero-image {
