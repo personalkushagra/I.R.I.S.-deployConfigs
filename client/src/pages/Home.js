@@ -1,51 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';
-import videoSource from './vid1.mp4'; // Import the video file
-import backgroundVideo from './vid2.mp4'; // Import the background video file
+import Header from '../components/Header'; // Adjust the path as necessary
+import styles from './Home.module.css';
+import videoSource from './vid1.mp4'; // Adjust the path as necessary
+import backgroundVideo from './vid2.mp4'; // Adjust the path as necessary
 
 function Home() {
   return (
-    <div className="home">
-      <video className="background-video" autoPlay muted loop>
+    <div className={styles.home}>
+      <video className={styles.backgroundVideo} autoPlay muted loop>
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      
-      <div className="overlay">
-        <header className="fixed-top">
-          <nav className="navbar navbar-expand-lg navbar-dark px-0 mx-0">
-            <div className="container py-0 px-0 align-content-center mx-5">
-              <Link className="navbar-brand" to="/">
-                <img src="/logo.png" alt="Logo" className="logo-img" />
-              </Link>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span className="navbar-toggler-icon "></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav ms-auto mb-2 mb-lg-0 py-3 justify-content-end">
-                  <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
-                  <li className="nav-item"><Link className="nav-link" to="/events">Events</Link></li>
-                  <li className="nav-item"><Link className="nav-link" to="/about">About Us</Link></li>
-                  <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
 
+      <Header />
+
+      <div className={styles.overlay}>
         <main className="flex-grow-1">
-          <div className="hero text-white d-flex align-items-center ">
+          <div className={`${styles.hero} text-white d-flex align-items-center`}>
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-lg-6 text-center text-lg-start">
-                  <h1 className="display-3 wordart">I.R.I.S</h1>
+                  <h1 className={`${styles.wordart} display-3`}>I.R.I.S</h1>
                   <h2 className="lead">Innovation Research & Intelligence Support</h2>
                   <p className="mb-4">Empowering innovation and fostering technological advancements.</p>
                 </div>
                 <div className="col-lg-6 text-center">
-                  {/* Add video component here */}
-                  <video className="hero-video" autoPlay loop muted>
+                  <video className={styles.heroVideo} autoPlay loop muted>
                     <source src={videoSource} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
@@ -54,24 +35,24 @@ function Home() {
             </div>
           </div>
 
-          <div className="journey py-5 text-center text-light">
+          <div className={`${styles.journey} py-5 text-center text-light`}>
             <div className="container">
-              <h3 className="journey-title py-5">Join us on the I.R.I.S Journey</h3>
+              <h3 className={styles.journeyTitle}>Join us on the I.R.I.S Journey</h3>
               <div className="row g-4">
                 <div className="col-md-4">
-                  <div className="step p-4 shadow-sm h-100">
+                  <div className={`${styles.step} p-4 shadow-sm h-100`}>
                     <h4>Bring Your Idea</h4>
                     <p>Transform your concepts into reality with our supportive community.</p>
                   </div>
                 </div>
                 <div className="col-md-4">
-                  <div className="step p-4 shadow-sm h-100">
+                  <div className={`${styles.step} p-4 shadow-sm h-100`}>
                     <h4>Collaborate and Develop</h4>
                     <p>Work with like-minded individuals to refine and expand your projects.</p>
                   </div>
                 </div>
                 <div className="col-md-4">
-                  <div className="step p-4 shadow-sm h-100">
+                  <div className={`${styles.step} p-4 shadow-sm h-100`}>
                     <h4>Achieve and Launch</h4>
                     <p>Bring your innovations to life and make a lasting impact in the tech world.</p>
                   </div>

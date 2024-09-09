@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../components/Header'; // Adjust path as needed
 import './About.css';
 import backgroundVideo from './vid2.mp4'; // Import the background video file
 
@@ -13,26 +14,9 @@ function AboutUs() {
         </video>
       </div>
       <div className="overlay"></div>
-      <header className="fixed-top">
-        <nav className="navbar navbar-expand-lg navbar-dark">
-          <div className="container">
-            <Link className="navbar-brand" to="/">
-              <img src="/logo.png" alt="Logo" className="logo-img" />
-            </Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav ms-auto">
-                <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/events">Events</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/about">About Us</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+      
+      <Header />
+      
       <main className="content py-5">
         <div className="container">
           <h1 className="title">About I.R.I.S</h1>
@@ -49,9 +33,9 @@ function AboutUs() {
             <div className="col-md-6">
               <div className="mission p-4">
                 <h2>Our Mission</h2>
-                <h4>To provide a platform for tech enthusiasts to ::</h4>
+                <h4>To provide a platform for tech enthusiasts to:</h4>
                 <h5>* Collaborate</h5>
-                <h5>*  Learn</h5>
+                <h5>* Learn</h5>
                 <h5>* Innovate</h5>
               </div>
             </div>
@@ -62,10 +46,11 @@ function AboutUs() {
           </div>
           <div className="team-members p-4">
             <h2>Team Members</h2>
-            <p>Person infos with roles to be added.</p>
+            <p>Person info with roles to be added.</p>
           </div>
         </div>
       </main>
+      
       <footer className="bg-dark text-light py-4">
         <div className="container">
           <div className="row">
