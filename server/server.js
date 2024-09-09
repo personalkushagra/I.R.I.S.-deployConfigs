@@ -2,7 +2,9 @@ import mysql from 'mysql2';
 import 'dotenv/config';
 import Razorpay from "razorpay";
 
-const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSOLPORT}/${process.env.MYSQLDATABASE}`
+//const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSOLPORT}/${process.env.MYSQLDATABASE}`
+
+const urlDB = `mysql://root:WRiXiuOncwXiCayINfmceCElHWYWVfQT@mysql.railway.internal:3306/railway`
 
 const db = mysql.createConnection(urlDB);
 
