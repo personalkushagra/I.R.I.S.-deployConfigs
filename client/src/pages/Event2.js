@@ -137,7 +137,7 @@ const Event2 = () => {
         description: "Hackathon Transaction",
         image: "https://avatars.githubusercontent.com/u/160888318?v=4",
         order_id: order.id,
-        callback_url: `$process.env.REACT_APP_BACKEND_URL/api/paymentverification?leader_email=${formData.leader_email}`,
+        callback_url: `${process.env.REACT_APP_BACKEND_URL}/api/paymentverification?leader_email=${formData.leader_email}`,
         prefill: {
           name: formData.leader_name,
           email: formData.leader_email,
