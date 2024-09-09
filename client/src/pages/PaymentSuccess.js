@@ -14,7 +14,8 @@ const PaymentSuccess = () => {
                 <h1>Payment Successful!</h1>
                 <p>Thank you for your payment. You have successfully registered for the Hackathon!</p>
                 <p>Your payment ID is: <strong>{reference}</strong></p>
-                <p>We have sent a confirmation email to the Leader.</p>
+                <p>*PLEASE NOTE YOUR PAYMENT ID FOR FUTURE REFERENCE*</p>
+                <p>Leader will receive an email shortly.</p>
                 <a href="/" className="home-button">Return to Home</a>
             </div>
         </div>

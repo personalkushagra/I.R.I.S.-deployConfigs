@@ -125,7 +125,7 @@ const Event2 = () => {
 
   const checkoutHandler = async () => {
     try {
-      const amount = 250;
+      const amount = 1;
       const { data: { key } } = await axios.get("http://localhost:5000/api/getkey");
       const { data: { order } } = await axios.post("http://localhost:5000/api/checkout", { amount });
 
