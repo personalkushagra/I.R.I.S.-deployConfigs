@@ -139,7 +139,7 @@ function Contact() {
           </div>
         )}
       </main>
-      
+
       <footer>
         <div className="footer-content">
           <div className="footer-section">
