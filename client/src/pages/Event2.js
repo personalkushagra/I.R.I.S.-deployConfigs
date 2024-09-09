@@ -86,7 +86,7 @@ const Event2 = () => {
     }
 
     try {
-      const response = await axios.post(`$process.env.REACT_APP_BACKEND_URL/api/event2`, formData);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/event2`, formData);
 
       if (response.data.success) {
         console.log('Registration successful!');
