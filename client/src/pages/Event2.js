@@ -86,7 +86,7 @@ const Event2 = () => {
     }
 
     try {
-      const response = await axios.post('${process.env.REACT_APP_BACKEND_URL}/api/event2', formData);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/event2`, formData);
 
       if (response.data.success) {
         console.log('Registration successful!');
@@ -126,8 +126,8 @@ const Event2 = () => {
   const checkoutHandler = async () => {
     try {
       const amount = 1;
-      const { data: { key } } = await axios.get("${process.env.REACT_APP_BACKEND_URL}/api/getkey");
-      const { data: { order } } = await axios.post("${process.env.REACT_APP_BACKEND_URL}/api/checkout", { amount });
+      const { data: { key } } = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/getkey`);
+      const { data: { order } } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/checkout`, { amount });
 
       const options = {
         key: key,
