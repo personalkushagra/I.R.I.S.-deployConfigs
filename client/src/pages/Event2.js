@@ -86,7 +86,7 @@ const Event2 = () => {
     }
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/event2`, formData);
+      const response = await axios.post(`$process.env.REACT_APP_BACKEND_URL/api/event2`, formData);
 
       if (response.data.success) {
         console.log('Registration successful!');
@@ -126,8 +126,8 @@ const Event2 = () => {
   const checkoutHandler = async () => {
     try {
       const amount = 1;
-      const { data: { key } } = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/getkey`);
-      const { data: { order } } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/checkout`, { amount });
+      const { data: { key } } = await axios.get(`$process.env.REACT_APP_BACKEND_URL/api/getkey`);
+      const { data: { order } } = await axios.post(`$process.env.REACT_APP_BACKEND_URL/api/checkout`, { amount });
 
       const options = {
         key: key,
@@ -137,7 +137,7 @@ const Event2 = () => {
         description: "Hackathon Transaction",
         image: "https://avatars.githubusercontent.com/u/160888318?v=4",
         order_id: order.id,
-        callback_url: `${process.env.REACT_APP_BACKEND_URL}/api/paymentverification?leader_email=${formData.leader_email}`,
+        callback_url: `$process.env.REACT_APP_BACKEND_URL/api/paymentverification?leader_email=${formData.leader_email}`,
         prefill: {
           name: formData.leader_name,
           email: formData.leader_email,
