@@ -4,7 +4,7 @@ import Razorpay from "razorpay";
 
 //const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSOLPORT}/${process.env.MYSQLDATABASE}`
 
-const urlDB = `mysql://root:WRiXiuOncwXiCayINfmceCElHWYWVfQT@mysql.railway.internal:3306/railway`
+const urlDB = `mysql://root:WRiXiuOncwXiCayINfmceCElHWYWVfQT@iris-deployconfigs.railway.internal:3306/railway`
 
 const db = mysql.createConnection(urlDB);
 
