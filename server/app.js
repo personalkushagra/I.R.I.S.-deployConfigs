@@ -5,7 +5,7 @@ import paymentRoutes from "./paymentRoutes.js";
 import cors from "cors";
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3306;
 
 // Middleware for CORS
 app.use(cors({
