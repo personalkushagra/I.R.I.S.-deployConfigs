@@ -9,7 +9,7 @@ const port = process.env.PORT || 3306;
 
 // Middleware for CORS
 app.use(cors({
-  origin: 'https://iris-mitwpu.netlify.app',
+  origin: '*',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));
