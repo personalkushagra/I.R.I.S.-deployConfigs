@@ -19,7 +19,7 @@ function Contact() {
   };
 
   const axiosInstance = axios.create({
-    baseURL: `${process.env.REACT_APP_BACKEND_URL}/api`,
+    baseURL: `https://${process.env.REACT_APP_BACKEND_URL}/api`,
   });
 
   const handleSubmit = async (e) => {

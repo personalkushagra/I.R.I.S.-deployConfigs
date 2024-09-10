@@ -4,6 +4,9 @@ import Razorpay from "razorpay";
 
 //const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSOLPORT}/${process.env.MYSQLDATABASE}`
 
+//this below url was added from MySQL's RAW Editor MySQL_URL
+//const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQL_ROOT_PASSWORD}@${process.env.RAILWAY_PRIVATE_DOMAIN}:3306/${process.env.MYSQL_DATABASE}`
+
 //this below url was added from repo's MySQL_URL
 const urlDB = `mysql://root:etMIPZfGQafWtrFlnFZQhbsMXItVpOVj@iris-deployconfigs.railway.internal:3306/railway`
 //and this is from SQL's MySQL_URL
