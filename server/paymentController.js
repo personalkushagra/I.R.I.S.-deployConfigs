@@ -50,7 +50,7 @@ export const paymentVerification = async (req, res) => {
           error: 'Failed to insert payment details',
         });
       } else {
-        res.redirect(`https://${process.env.REACT_APP_BACKEND_URL}/paymentsuccess?reference=${razorpay_payment_id}`);
+        res.redirect(`http://${process.env.REACT_APP_BACKEND_URL}/paymentsuccess?reference=${razorpay_payment_id}`);
       }
     });
   } else {
